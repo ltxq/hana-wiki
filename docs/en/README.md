@@ -1,5 +1,4 @@
 ---
-cover: .gitbook/assets/IMG_2563.png
 coverY: 0
 layout:
   width: default
@@ -29,30 +28,37 @@ layout:
 
 # Home
 
-Hana is a Discord App that chats naturally, has a Japanese daily-life status, and brings useful AI and fun commands to your server.
+Hana is an expressive, context-aware Discord Application designed to enrich communities with authentic Japanese daily life routines, Custom Roleplay NPCs, a Dedicated Server Secretary Desk, Text-to-Speech (TTS), and engaging social commands.
 
-> Hana supports Thai, English, and Japanese.
+> 🌸 Hana natively supports Thai, English, and Japanese.
 
-## Start here
+---
 
-* [Get started](start-here.md)
-* [AI and settings](commands/ai-and-settings.md)
-* [Fun and Anime GIF commands](commands/fun-and-actions.md)
-* [Japan travel photos](commands/travel-photo.md)
-* [Frequently asked questions](faq.md)
+## Quick Navigation
 
-## What Hana can do
+* [Getting Started](start-here.md) — Fast onboarding for administrators and members
+* [Command Directory](commands/README.md) — Overview of all available Slash Commands
+* [Custom Roleplay NPCs](commands/npc-roleplay.md) — Create immersive Webhook-powered characters
+* [Text-to-Speech (TTS)](commands/tts.md) — Real-time chat narration in voice channels
+* [Server Owner Guide & Secretary Desk](roomai-and-permissions.md) — Setup AI rooms and dedicated server secretaries
+* [Get a Gemini API Key](guides/get-gemini-api-key.md) — Step-by-step guide to power custom AI features
+* [Frequently Asked Questions](faq.md) — Answers to common questions
 
-| Area         | Examples                                                                  |
-| ------------ | ------------------------------------------------------------------------- |
-| AI Room      | Set a channel for chatting with Hana, with memory controlled by each user |
-| Hana Life    | View Hana's current activity and schedule in Japan time                   |
-| Fun          | Anime GIFs, mini-games, and chat activities                               |
-| Travel       | Reference photos from Japanese prefectures                                |
-| Server tools | Server information and rules through Hana Context                         |
+---
 
-## Help or Premium
+## Feature Overview
 
-Contact Hana at [Hana Discord](https://discord.gg/qWbQEABAPA).
+| Category | Highlights |
+| :--- | :--- |
+| **Hana AI Chat** | Conversational companion with daily school routines, hobbies, and long-term memory |
+| **NPC Roleplay** | Create custom characters speaking via Discord Webhooks with distinct avatars and names |
+| **Server Secretary** | Dedicated information assistant strictly answering server guidelines and channel navigation |
+| **Voice & TTS** | Voice channel reader with automatic URL/mention stripping and spam protection |
+| **Fun & Travel** | Random travel reference photos across Japan, expressive anime GIFs, and mini-games |
 
-Read [Terms & Privacy](https://github.com/skyy064986/hanaTERMS_OF_SERVICE-PRIVACY_POLICY).
+---
+
+## Need Support or Premium?
+
+- Join our community on [Hana Discord](https://discord.gg/qWbQEABAPA)
+- Review our full legal policies at [Terms & Privacy](https://github.com/skyy064986/hanaTERMS_OF_SERVICE-PRIVACY_POLICY)

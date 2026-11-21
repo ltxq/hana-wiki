@@ -1,38 +1,52 @@
-# Getting started with Hana
+# Getting Started with Hana
 
-## 1. Add Hana to your server
+A quick setup guide for administrators and members to bring lively interactions into your Discord server.
 
-An owner or administrator adds Hana, then grants these permissions in the channel you want to use:
+---
 
-- View Channel
-- Send Messages
-- Embed Links
-- Use Application Commands
-- Send Messages in Threads, when using threads
+## 1. Invite Hana to Your Server
 
-> If `/travelphoto` reports a permission error, check Hana's `Embed Links` permission in that channel or category.
+Server owners and administrators can invite Hana and grant the necessary channel permissions:
+- `View Channel` & `Send Messages`
+- `Read Message History` & `Embed Links`
+- `Manage Webhooks` (Required for the `/npc` roleplay system)
+- `Connect` & `Speak` (Required for the `/tts` narration system)
 
-## 2. Set an AI Room
+---
 
-An administrator uses `/setroomai` in the intended channel. Use `/unsetroomai` any time to disable it.
+## 2. Enable Casual AI Chat Rooms (`/setroomai`)
 
-Hana responds only in Thai, English, and Japanese. It will not guess the meaning of other languages.
+Run `/setroomai` in any channel where you want members to chat with Hana. Members can immediately begin talking with her naturally.
 
-## 3. Start chatting
+Hana fluently communicates in Thai, English, and Japanese.
 
-Chat normally in an AI Room. Hana reads the recent context from the same speaker before answering, without mixing other members' conversations.
+---
 
-## 4. Set your preferences
+## 3. Configure the Server Secretary Desk (`/hanacontext`)
 
-Use `/settingai` for memory, timezone, reply mentions, and personal profile details. Hana does not send unsolicited proactive tags.
+If your community needs a dedicated assistant to answer rule inquiries and navigate channels:
+1. Run `/hanacontext` (Admin).
+2. Select the secretary's designated room using the dropdown menu.
+3. Fill out the modal with server rules and your Gemini or OpenRouter API key.
+4. The Secretary activates immediately with strict server-only guardrails.
 
-## Use outside a server
+---
 
-These commands support User Install and DM:
+## 4. Create Custom Roleplay NPCs (`/npc create`)
 
-- `/travelphoto`
-- `/act`
-- `/actwith`
-- `/premium`
+Spawn customized characters that respond with their own avatars and names via Webhooks:
+1. Run `/npc create` in the target room.
+2. Provide the character's Name, Personality prompt, and Opening Greeting.
+3. Members can converse with the NPC by **Replying** to its message or mentioning its name.
 
-AI Room, voice, and server-management commands are available only in servers.
+---
+
+## 5. Enable Text-to-Speech (`/tts`)
+
+Join a voice channel and type `/tts` in your text chat. Hana joins and narrates new messages aloud. Type `/leave` when finished.
+
+---
+
+## 6. Personalize Your Experience (`/settingai`)
+
+Each member can use `/settingai` to adjust personal timezone, manage server memory, or teach Hana a preferred nickname.

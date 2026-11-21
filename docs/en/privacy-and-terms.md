@@ -1,30 +1,40 @@
-# Privacy and terms
+# Privacy and Terms
 
-## Do not enter
+## Information You Should Never Share
 
-Do not send or save these details in Hana:
+For your security and privacy, never submit or store the following information with Hana:
 
-- Address or precise location
-- Phone number, private email, or password
-- Card or financial details
-- Identity documents
-- Health data or another person's sensitive information
+- Home or physical workplace addresses and precise geolocation
+- Phone numbers, personal email addresses, or account passwords
+- Credit cards, banking details, or financial accounts
+- Government IDs, passports, or personal identification records
+- Health records, medical data, or confidential details of others
 
-If you want Hana to use a name or understand simple context, a nickname, voluntary age, or a general important date is enough.
+If you want Hana or custom characters to address you naturally, basic nicknames, voluntary ages, or birthdays are more than enough.
 
-## What Hana does not do
+---
 
-- Guess your age or personal data from your name, profile picture, or language
-- Claim it sent a photo or completed an action before the system verifies it
-- Start romantic roleplay; Hana keeps the relationship as friends
+## What Hana Does Not Do
 
-The friends-only relationship above describes Hana, not a character a user creates in `/privateai`. Private AI still follows Discord rules, applicable law, and Gemini safety filters.
+- Never sends unsolicited proactive tags to avoid disrupting members.
+- Never guesses age, gender, or personal attributes from user profiles or avatars.
+- Never falsely claims to have sent photos or completed actions without confirmed system delivery.
+- Never initiates romantic roleplay; Hana strictly maintains a platonic friendship persona.
 
-## Private AI and API keys
+> **Note:** The platonic friend policy applies strictly to Hana herself. Characters created via `/npc` adopt the personality defined by their creator, subject to Discord Terms of Service, applicable laws, and AI provider safety filters.
 
-Enter Gemini API keys only in the `/privateai` form, never in ordinary chat. Keys are encrypted before storage and excluded from ordinary logs and exports. Up to five slots share keys/model while keeping character, scene, memory, history, and relationship data isolated. Data is stored in local SQLite with up to three rotating recovery backups. The panel lets you view, clear, reset, export, or delete Private AI data. A deleted active record may remain in an older backup until rotation or operator cleanup.
+---
 
-## Full documents
+## API Key Security (for `/hanacontext` and `/npc`)
+
+- Always input API keys (Gemini or OpenRouter) via secure modal forms—never in regular chat channels.
+- Stored API keys are **strictly encrypted with AES-256-GCM** prior to database storage in local SQLite tables.
+- Keys are never outputted into runtime logs, shared with third parties, or displayed to other server members.
+- Rolling local backups (up to 3 generations) ensure data resilience.
+
+---
+
+## Official Documents
 
 - [Terms of Service](https://github.com/skyy064986/hanaTERMS_OF_SERVICE-PRIVACY_POLICY/blob/main/TERMS_OF_SERVICE.md)
 - [Privacy Policy](https://github.com/skyy064986/hanaTERMS_OF_SERVICE-PRIVACY_POLICY/blob/main/PRIVACY_POLICY.md)

@@ -1,47 +1,57 @@
 # Gemini API キーの取得方法
 
-このガイドでは、Hana の `/privateai` で使う自分専用の Gemini API キーを作成します。所要時間は約 2～3 分です。
+このガイドでは、**サーバー専属秘書デスク（`/hanacontext`）** や **NPC ロールプレイシステム（`/npc`）** で利用するための Google Gemini API キーを約2〜3分で取得する手順を解説します。
 
-> API キーはパスワードと同じように扱ってください。通常のチャットに投稿したり、他人に渡したり、キー全体が見えるスクリーンショットを公開したりしないでください。漏えいした場合は、そのキーを削除してすぐに新しいキーを作成してください。
+> ⚠️ **セキュリティ警告:** API キーはパスワードと同等の機密情報です。公開チャットに投稿したり、他者と共有したり、キー全体が映ったスクリーンショットを共有しないでください。誤って流出した場合は、直ちに Google AI Studio で該当キーを削除して再作成してください。
 
-## 1. Google AI Studio を開く
+---
 
-[Google AI Studio](https://aistudio.google.com/welcome) を開き、Google アカウントでログインします。
+## 1. Google AI Studio にアクセス
 
-初めて利用する場合は **Get started** を押し、Google の利用条件を確認してから進みます。
+[Google AI Studio](https://aistudio.google.com/welcome) にアクセスし、個人の Google アカウントでログインします。
+
+初めて利用する場合は **Get started** をクリックし、Google の利用規約に同意してください。
 
 ![Google AI Studio の Get started ボタン](../.gitbook/assets/gemini-api-key-01-get-started.png)
 
-## 2. API Keys を開く
+---
 
-AI Studio の Dashboard を開き、左側メニューにある鍵型の **API Keys** アイコンを押します。
+## 2. API Keys ページを開く
 
-![API Keys を開く鍵型アイコン](../.gitbook/assets/gemini-api-key-02-menu.png)
+AI Studio ダッシュボードに入ったら、左側のサイドメニューにある鍵マークの **API Keys** アイコンをクリックします。
 
-## 3. キーを作成する
+![API Keys ページを開く鍵マーク](../.gitbook/assets/gemini-api-key-02-menu.png)
 
-**Create API Key** を押します。
+---
+
+## 3. API キーを作成
+
+**Create API Key** ボタンをクリックします。
 
 ![Create API Key ボタン](../.gitbook/assets/gemini-api-key-03-create.png)
 
-- 新規ユーザーには、Google が初期プロジェクトとキーを自動作成している場合があります。そのキーを使うことも、別のキーを作ることもできます。
-- プロジェクトを求められた場合は、既存のプロジェクトを選ぶか Hana 専用のプロジェクトを作成します。
-- 作成後はキーをコピーし、一時的に安全な場所へ保管します。
+- 新規アカウントの場合、初期プロジェクトとキーがあらかじめ生成されていることがあります。その場合はそのキーをコピーしてそのまま使用できます。
+- プロジェクトの選択画面が表示された場合は、既存の Google Cloud プロジェクトを選ぶか、新規プロジェクトを作成してください。
+- 作成されたら **Copy** アイコンをクリックしてキーを安全な場所にコピーします。
 
-## 4. Hana にキーを登録する
+---
 
-1. Discord に戻り、`/privateai` を実行します。
-2. **2 · Gemini キー追加**、または **Gemini Text & Keys → キー追加** を開きます。
-3. `Gemini API key #1` にキーを貼り付け、フォームを送信します。
-4. キーの確認と利用可能なテキストモデルの読み込みが終わるまで待ちます。
+## 4. Hana に API キーを登録する
 
-最初の欄は必須で、残りの欄は空欄でも構いません。Private AI は最大 10 個のキーに対応し、保存前に各キーを暗号化します。
+### サーバー専属秘書デスク（`/hanacontext`）の場合
+1. Discord サーバーで `/hanacontext` を実行します。
+2. `ChannelSelectMenu` から秘書を配属したいチャンネルを選択します。
+3. **「秘書設定 / 編集」** ボタンをクリックします。
+4. **Gemini API Key** 欄にコピーしたキーを貼り付けて送信します。
+5. キーの有効性が検証され、Bot 本体のクォータを消費することなく秘書機能が即座に利用可能になります。
 
-## キーを作成できない場合
+### NPC ロールプレイ（`/npc`）の場合
+- サーバーで設定された共有キーや割り当てキーを使用して、ホストの制限に縛られずに快適なロールプレイ応答を利用できます。
 
-- Google の利用規約に同意済みか確認してください。
-- 学校・組織アカウントではキー作成権限がない場合があります。個人アカウントを使うか、Google Cloud 管理者へ問い合わせてください。
-- 既存のプロジェクトが表示されない場合は、先に AI Studio へ Import する必要があります。
-- キーが有効でも、一部のモデルに Free Tier がない場合や、プロジェクトの利用枠に達している場合があります。
+---
 
-Google 公式ドキュメント: [Gemini API を使い始める](https://ai.google.dev/gemini-api/docs/get-started) · [Gemini API キーの管理](https://ai.google.dev/gemini-api/docs/api-key)
+## 注意事項とトラブルシューティング
+
+- 学校や企業の組織向け Google Workspace アカウントでは、API キーの発行が制限されている場合があります。個人の通常 Google アカウントをご利用ください。
+- Hana に入力された API キーは、データベース保存前に **AES-256-GCM により強力に暗号化** されます。ログや出力に平文で記録されたり外部に漏洩することはありません。
+- 公式 Google ドキュメント: [Gemini API はじめに](https://ai.google.dev/gemini-api/docs/get-started) · [API キーの管理](https://ai.google.dev/gemini-api/docs/api-key)

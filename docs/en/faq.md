@@ -1,33 +1,62 @@
-# Frequently asked questions
+# Frequently Asked Questions
 
-## Hana does not reply
+## What should I do if Hana doesn't respond?
 
-Check that the channel has RoomAI enabled and Hana has View Channel and Send Messages. Messages must be Thai, English, or Japanese.
+Ensure the channel has been enabled using `/setroomai`, and confirm that Hana has `View Channel`, `Send Messages`, and `Read Message History`. Supported languages are Thai, English, and Japanese.
 
-## Why does Hana ask a question instead of answering?
+---
 
-For ambiguous messages, Hana reads recent context first. If the meaning is still genuinely unknown, it asks a short question rather than guessing.
+## How do I create and interact with Custom NPCs?
 
-## Why did Hana not send a photo?
+Use `/npc create` in your desired channel and fill out the 3 fields (Name, Personality/Prompt, and Opening Greeting). After creation, members can talk to the NPC by:
+1. **Replying directly** to the NPC's message.
+2. Or **Mentioning the NPC's name** in the channel.
 
-Hana only sends a reference photo when the system confirms the place and Pexels returns a valid result. It does not substitute a photo from somewhere else.
+---
 
-## Why does `/travelphoto` say Missing Permissions?
+## What is the difference between the Server Secretary (`/hanacontext`) and Hana's AI room?
 
-An administrator must grant Hana `Embed Links` and `Send Messages` in that channel or thread.
+- **Server Secretary (`/hanacontext`)**: Acts as a dedicated information desk. It exclusively answers questions regarding server rules, announcements, roles, and channel directions. Strict prompt guardrails ensure it politely refuses off-topic casual chat.
+- **Hana AI Room (`/setroomai`)**: Hana acts as a friendly high-school friend chatting about life, Splatoon, sweets, and everyday topics, completely free from server administrative duties.
 
-## Does Hana remember across servers?
+---
 
-Not by default. Memory is separated by server, and you must explicitly approve sharing in `/settingai`.
+## How do I use Text-to-Speech (TTS)?
 
-## Will Hana randomly tag me first?
+Join a voice channel, then run `/tts` in the text channel you want read aloud. Hana will join your voice room and start reading incoming messages. Run `/leave` to disconnect her, or simply leave the room; Hana will automatically disconnect when the room is empty.
 
-No. Proactive greetings were removed to avoid disturbing members. Hana responds after you start a conversation or use a command.
+---
 
-## What languages does Hana support?
+## Is my API Key safe with Hana?
 
-Thai, English, and Japanese only.
+Yes. Any Gemini or OpenRouter API key entered via `/hanacontext` or bot settings is encrypted using **AES-256-GCM** before being stored in the local database. Keys are never logged in system transcripts or shared publicly.
 
-## Where can I contact the team?
+---
 
-[Hana Discord](https://discord.gg/qWbQEABAPA)
+## Why does Hana ask clarifying questions instead of answering directly?
+
+When messages are ambiguous, Hana reads recent conversation context. If the intent is still uncertain, she asks a brief clarifying question rather than hallucinating or making incorrect assumptions.
+
+---
+
+## Why did `/travelphoto` fail with Missing Permissions?
+
+`/travelphoto` requires the `Embed Links` permission in Discord so the bot can display rich image embeds from Pexels.
+
+---
+
+## Does Hana remember cross-server conversations?
+
+No, memory is server-isolated by default. You can explicitly enable cross-server memory sharing through your personal `/settingai` panel.
+
+---
+
+## Does Hana proactively tag members?
+
+No, unsolicited proactive tagging was permanently removed to avoid disturbing members. Hana only replies when spoken to.
+
+---
+
+## Where can I get support?
+
+Join the community and ask questions on [Hana Discord](https://discord.gg/qWbQEABAPA).
