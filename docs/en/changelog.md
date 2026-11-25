@@ -2,6 +2,10 @@
 
 ## HanaBot v1.5.2 — 25 November 2026
 
+- **🎭 `/npc` is now a single button panel**:
+  - The five subcommands (`create` / `list` / `move` / `edit` / `delete`) were merged into one `/npc` command that opens an easy button hub, like the secretary desk.
+  - Create, filter (all / mine), pick a character from a select menu, change its model, edit its profile/keys/channel, and delete it — all without typing IDs or command names.
+  - The whole panel renders in Thai / English / Japanese, and clearing a character's key now really falls back to the server vault.
 - **🔒 Memory is now scoped per server**:
   - Memory and relationship state are kept per **Discord User ID + Server ID**, so a conversation in one server does not bleed into another.
   - Older global memory is kept aside, and you can **move it into this server** from `/settingai`.

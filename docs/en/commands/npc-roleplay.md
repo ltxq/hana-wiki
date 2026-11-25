@@ -2,107 +2,99 @@
 
 `/npc` is a server roleplay character management system powered by Discord Webhooks. Characters respond with their own designated name and avatar, creating an authentic in-character immersion.
 
+> **Updated in v1.5.2:** `/npc` is now a **single command that opens a button panel**. The old subcommands (`create` / `list` / `move` / `edit` / `delete`) were removed — everything is done by pressing buttons, just like the secretary desk (`/secretary`).
+
 ---
 
 ## Key Highlights
 
+- **One command, all buttons**: press `/npc` once, then use the buttons and drop-downs on the panel. No subcommand names or character IDs to memorise.
 - **Webhook Representation**: Every reply is sent through a custom Discord Webhook featuring the NPC's specific avatar and name.
-- **Easy 3-Field Creation (`/npc create`)**: Simply provide the character's Name, Personality/System Prompt, and an Opening Greeting. The bot automatically provisions the webhook and posts the opening line.
-- **Natural Interaction**: Server members can interact with NPCs either by **Replying directly** to an NPC message or by **Mentioning the character's name** in the channel.
-- **Real Conversation Memory**: Each character remembers up to 12 turns of your conversation (kept separately per character and per user), so it can hold a thread instead of forgetting every reply.
-- **Your Choice of Model**: Pick between Gemini, OpenRouter (including DeepSeek, GPT, Claude), or specify your own provider and model.
-- **Isolated Quota**: Supports user or server-level API keys (Gemini / OpenRouter) with key rotation, preventing bot host quota exhaustion.
+- **Easy 3-Field Creation**: press **➕ Create NPC** and fill in the Name, Personality/System Prompt, and Opening Greeting. The bot provisions the webhook and posts the opening line automatically.
+- **Natural Interaction**: Server members interact with NPCs by **Replying directly** to an NPC message or by **writing the character's name** in the channel.
+- **Real Conversation Memory**: Each character remembers up to 12 turns of your conversation (kept separately per character and per user, and forgotten after 6 hours of silence).
+- **Your Choice of Model**: a drop-down on the management panel switches between Gemini, OpenRouter (DeepSeek, GPT, Claude), or a custom provider/model instantly.
+- **3 Languages**: the whole panel follows your `/settingai` language (Thai, English or Japanese).
+- **Isolated Quota**: characters use their own API keys (Gemini / OpenRouter) first, then the server central keys from `/admin`, so the bot host's quota is never consumed.
 - **Decoupled from Hana**: Hana remains a cheerful high-school student chatting in `/setroomai` rooms without role confusion.
 
 ---
 
-## Command Reference (`/npc`)
+## Opening the hub (`/npc`)
 
-| Subcommand | Description | Required Permissions |
-| :--- | :--- | :--- |
-| `/npc create` | Opens a modal to create a new NPC in the current channel | Server Members / Configured |
-| `/npc list` | Displays all active NPCs in the server with IDs and channels | Everyone |
-| `/npc move` | Relocates an NPC to a specific channel (or all channels) | NPC Owner / Admins |
-| `/npc edit` | Edits an NPC's name, personality prompt, or avatar | NPC Owner / Admins |
-| `/npc delete` | Deletes an NPC and cleanly cleans up its Discord Webhook | NPC Owner / Admins |
+Simply run `/npc` in any server channel. Hana replies **ephemerally** (only you can see the panel) with:
+
+- the number of characters on the server and how many are yours,
+- the status of the server central API keys,
+- a preview list of the characters (name, home channel, model, key source),
+- a **select menu** to jump straight into a character's management panel.
+
+Anyone can open the hub. Admin-only shortcuts (**Central keys**, **Secretary desk**) appear only for members with channel/server management permissions.
+
+### Hub buttons
+
+| Button | What it does |
+| :--- | :--- |
+| ➕ **Create NPC** | Opens the 3-field creation modal in the current channel |
+| 🎭 **All** / 👤 **Mine** | Filters the list (and the select menu) to everyone / just your characters |
+| ❓ **How to use** | Opens a short in-panel guide |
+| 👑 **Central keys** | Jumps to `/admin` (admins only) |
+| 👩‍💼 **Secretary desk** | Jumps to `/secretary` (admins only) |
+| 🔄 **Refresh** | Reloads the panel after an external change |
 
 ---
 
-## How to Create an NPC (`/npc create`)
+## Creating a character
 
-1. Type `/npc create` in the channel where you want the character to reside.
-2. Complete the 3-field modal form:
-   - **NPC Name**: The display name for the character (e.g. `Yami`, `Sensei Aiko`, `Knight Arthur`).
-   - **Personality / Prompt**: Role, background, personality traits, speech tone, and behavior boundaries.
-   - **Opening Greeting**: The debut message the NPC posts into the channel upon creation.
-3. *(Optional)* Upload an avatar image file or provide an avatar image URL.
-4. Submit the form. The bot will configure the channel webhook and post the greeting immediately!
+1. Run `/npc`.
+2. Press **➕ Create NPC**.
+3. Fill in the modal:
+   - **NPC Name** — the webhook display name (e.g. `Yami`, `Sensei Aiko`, `Knight Arthur`).
+   - **Personality** — role, background, traits, speech tone and behaviour boundaries.
+   - **Opening Greeting** — the debut message posted into the channel immediately.
+4. Submit. Hana creates the webhook, posts the greeting, and shows the character ID in an ephemeral confirmation.
 
 ---
 
-## How to Interact with NPCs
-
-Members can chat with NPCs using two convenient methods:
+## Interacting with NPCs
 
 ### 1. Direct Reply
-Click **Reply** on any message sent by the NPC and type your response. The bot fetches recent dialogue context and generates a contextual reply from that character.
+Click **Reply** on any message sent by the NPC and type your response. The character uses its own conversation history to answer in context.
 
 ### 2. Mention by Name
-Mention the character's exact name anywhere in your channel message, for example:
+Write the character's exact name anywhere in its channel:
 ```text
 Hello Yami, did you finish the math assignment yet?
 ```
-The matching NPC assigned to that channel will respond in-character.
+A matching NPC assigned to that channel will respond in character.
 
 ---
 
-## Managing Your NPCs
+## Managing a character
 
-### Listing Server NPCs (`/npc list`)
-Run `/npc list` to view an embed listing all server NPCs:
-- Character ID (used as an argument for edit/move/delete)
-- Display Name
-- Assigned Channel
-- Creator / Owner
+Pick a character from the hub's select menu (or press its entry in the list) to open the management panel:
 
-### Moving an NPC (`/npc move`)
-```text
-/npc move id:npc_xxxxxx channel:#roleplay-tavern
-```
-Leave the `channel` option empty to allow the NPC to reply across any eligible channel.
+- **Model drop-down** — switch provider/model instantly; **⚙️ custom** opens a modal for `provider:model`.
+- 📝 **Edit profile** — change name, personality, greeting and avatar URL.
+- 🔑 **API key** — set or clear the character's own keys.
+- 📍 **Move channel** — pick a text channel, or press **🌐 Any channel (Global)**.
+- 🗑️ **Delete** — asks for confirmation before removing the character.
+- 📋 **Back to hub** — returns to the main panel.
 
-### Editing an NPC (`/npc edit`)
-```text
-/npc edit id:npc_xxxxxx
-```
-Re-opens the configuration modal to modify the character's name, prompt, or avatar. The management panel also lets you pick the **AI model** and set the character's own **API key**.
+### API keys
 
-### Deleting an NPC (`/npc delete`)
-```text
-/npc delete id:npc_xxxxxx
-```
-Permanently removes the NPC, its stored conversation history, and safely purges the associated Discord Webhook from the channel.
+1. Open the character's management panel.
+2. Press **🔑 API key**.
+3. Paste one key per line and save. Leave the field empty and save to **clear** the character's keys and fall back to the server central keys from `/admin`.
 
----
-
-## Setting an API Key
-
-Each character can use its own key, so it never eats into the bot's central quota:
-
-1. Run `/npc edit id:npc_xxxxxx`
-2. Press **Set API key**
-3. Paste your keys, one per line, and save
-
-Hana rotates through the keys automatically when one hits a rate limit, and never substitutes another member's key or the bot's central key. If no key is usable, the character owner is told.
-
-> Server moderators can set the shared keys for the whole server with `/admin`. An NPC uses those when it has no key of its own.
+Hana rotates through keys automatically when one hits a rate limit. A character never uses another member's key, and Hana's own central key is only used as the final server-level fallback configured by an admin.
 
 ---
 
 ## Required Discord Permissions
 
 For the NPC system to operate smoothly, ensure the bot has:
-- `Manage Webhooks` (Essential for creating and transmitting webhook messages)
+- `Manage Webhooks` (essential for creating and sending webhook messages)
 - `View Channel`
 - `Send Messages`
 - `Read Message History`

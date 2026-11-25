@@ -32,12 +32,13 @@ If your community needs a dedicated assistant to answer rule inquiries and navig
 
 ---
 
-## 4. Create Custom Roleplay NPCs (`/npc create`)
+## 4. Create Custom Roleplay NPCs (`/npc`)
 
 Spawn customized characters that respond with their own avatars and names via Webhooks:
-1. Run `/npc create` in the target room.
-2. Provide the character's Name, Personality prompt, and Opening Greeting.
+1. Run `/npc` in the target room — it opens a button panel.
+2. Press **➕ Create NPC** and fill in the Name, Personality prompt, and Opening Greeting.
 3. Members can converse with the NPC by **Replying** to its message or mentioning its name.
+4. Use the same panel to filter characters, change models, set keys, move channels, or delete a character.
 
 ---
 

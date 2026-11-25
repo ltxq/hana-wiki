@@ -8,7 +8,7 @@ Ensure the channel has been enabled using `/setroomai`, and confirm that Hana ha
 
 ## How do I create and interact with Custom NPCs?
 
-Use `/npc create` in your desired channel and fill out the 3 fields (Name, Personality/Prompt, and Opening Greeting). After creation, members can talk to the NPC by:
+Run `/npc` in your desired channel, press **➕ Create NPC**, and fill out the 3 fields (Name, Personality/Prompt, and Opening Greeting). Everything else is a button on the same panel. After creation, members can talk to the NPC by:
 1. **Replying directly** to the NPC's message.
 2. Or **Mentioning the NPC's name** in the channel.
 

@@ -25,13 +25,9 @@ Chat casually with Hana, monitor her daily routine, and customize personal prefe
 
 Create and control immersion characters that reply via Discord Webhooks with distinct avatars and display names.
 
-| Subcommand | Description |
+| Command | Description |
 | :--- | :--- |
-| `/npc create` | 3-field modal to create a new NPC and post its opening greeting |
-| `/npc list` | Displays an overview table of all server NPCs and assigned channels |
-| `/npc move` | Relocates an NPC to a target channel or permits all channels |
-| `/npc edit` | Edits an NPC's name, personality prompt, or avatar |
-| `/npc delete` | Deletes an NPC and cleanly disposes of its Discord Webhook |
+| `/npc` | Opens one button panel for everything: create, list/filter, manage (model, profile, keys, channel), and delete. No subcommands to memorise. |
 
 👉 Learn more: [Custom Roleplay NPCs](npc-roleplay.md)
 
