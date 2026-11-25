@@ -10,6 +10,7 @@
   - Fixed a display bug where some panels showed raw keys such as `common.status:` and `settings.memory.title:` instead of translated text.
   - Secretary setup now has a **model picker menu** (no provider/model typing) and no API key field — set the server keys once in `/admin`.
   - Gemini 503 errors now show a short Thai "system is busy, try again in a moment" message instead of raw error JSON (secretary, NPCs and RoomAI).
+  - **Server-wide AI model**: set it in `/admin` (button or `/admin model:` autocomplete search), pick from 33 models with pagination and keyword search. The Secretary and NPCs use it as their default but can search/override it per character.
 - **🎭 `/npc` is now a single button panel**:
   - The five subcommands (`create` / `list` / `move` / `edit` / `delete`) were merged into one `/npc` command that opens an easy button hub, like the secretary desk.
   - Create, filter (all / mine), pick a character from a select menu, change its model, edit its profile/keys/channel, and delete it — all without typing IDs or command names.

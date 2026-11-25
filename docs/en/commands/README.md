@@ -40,7 +40,7 @@ Tools for server owners and administrators to maintain community guidelines.
 | Command | Description |
 | :--- | :--- |
 | `/hanacontext` | Manage server context and configure the **Dedicated Server Secretary Desk** (also available as `/secretary`) |
-| `/admin` | AI system admin hub for configuring the server's **central API keys** (moderators only) |
+| `/admin` | Admin hub for **central API keys** and the server's **default AI model**; `/admin model:` searches models as you type (moderators only) |
 | `/hanainsights` | Displays this week's AI quota and the features active for everyone (all free) |
 
 👉 Learn more: [Server Owner Guide & Secretary Desk](../roomai-and-permissions.md)
