@@ -2,16 +2,22 @@
 
 ## HanaBot v1.5.2 — 25 November 2026
 
+- **⚙️ Command cleanup (beta)**:
+  - `/settingai` was renamed to **`/settings`**; the language picker is now on the **first page**, and the "view memory" button was removed because memory is short-term.
+  - `/premium` was removed — every feature is free during beta. Premium lock text and links were also removed from `/statusai`, `/hanainsights` and the secretary desk.
+  - Removed "(ฟรี)" from command descriptions.
+  - `/statusai` now shows only the essentials: Japanese time, current activity, location, weather, outfit, mood, health, interest and today's event. Personality, summary, energy, Discord status and university calendar were dropped.
+  - Fixed a display bug where some panels showed raw keys such as `common.status:` and `settings.memory.title:` instead of translated text.
 - **🎭 `/npc` is now a single button panel**:
   - The five subcommands (`create` / `list` / `move` / `edit` / `delete`) were merged into one `/npc` command that opens an easy button hub, like the secretary desk.
   - Create, filter (all / mine), pick a character from a select menu, change its model, edit its profile/keys/channel, and delete it — all without typing IDs or command names.
   - The whole panel renders in Thai / English / Japanese, and clearing a character's key now really falls back to the server vault.
 - **🔒 Memory is now scoped per server**:
   - Memory and relationship state are kept per **Discord User ID + Server ID**, so a conversation in one server does not bleed into another.
-  - Older global memory is kept aside, and you can **move it into this server** from `/settingai`.
+  - Older global memory is kept aside in state; the old move button disappeared together with the memory panel.
   - Memory summarisation jobs are keyed per user and server, so one server can no longer overwrite another.
 - **🌐 The settings panels follow your language**:
-  - New language picker at `/settingai` → Personal info and time (Thai / English / Japanese, or automatic based on what you chat in).
+  - The language picker is on the **first page of `/settings`** (Thai / English / Japanese, or automatic based on what you chat in).
   - The settings, memory, personal data, and profile panels all render in the language you chose.
 - **🔑 Per-feature API keys**:
   - The server secretary can now take its own API key through the `sec_keys` field in the setup form (leave it empty to use the server's central keys).

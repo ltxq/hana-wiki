@@ -47,7 +47,7 @@ When messages are ambiguous, Hana reads recent conversation context. If the inte
 
 ## Does Hana remember cross-server conversations?
 
-No, memory is server-isolated by default. You can explicitly enable cross-server memory sharing through your personal `/settingai` panel.
+No. Memory is short-term and always scoped to one server; cross-server sharing is not available. You can delete your data from `/settings` → Data.
 
 ---
 

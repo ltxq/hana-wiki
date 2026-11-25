@@ -58,7 +58,8 @@ Hana คือ Discord App ที่คุยเป็นธรรมชาต�
 
 ---
 
-## ต้องการความช่วยเหลือหรือสนใจ Premium?
+## ต้องการความช่วยเหลือ?
 
 - ติดต่อทีมงานและร่วมพูดคุยได้ที่ [Hana Discord](https://discord.gg/qWbQEABAPA)
-- อ่านข้อกำหนดการใช้งานและความเป็นส่วนตัวได้ที่ [Terms & Privacy](https://github.com/skyy064986/hanaTERMS_OF_SERVICE-PRIVACY_POLICY)
+- อ่านข้อกำหนดการใช้งานและความเป็นส่วนตัวได้ที่ [Terms & Privacy](https://github.com/ltxq/hanaTERMS_OF_SERVICE-PRIVACY_POLICY)
+- เปิดฟรีทุกฟีเจอร์ในช่วงเบต้า ไม่มีแพ็กเกจ Premium

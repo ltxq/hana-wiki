@@ -14,7 +14,7 @@ Chat casually with Hana, monitor her daily routine, and customize personal prefe
 | `/unsetroomai` | Deactivates Hana AI chat in the current channel |
 | `/guildbook` | Displays the interactive guide inside Discord |
 | `/statusai` | Shows Hana's current daily routine based on Japan Standard Time |
-| `/settingai` | Opens your private control panel (memory, timezone, personal profile) |
+| `/settings` | Opens your private panel — language on the first page, replies, timezone, profile, data |
 | `/profile` | Shows your profile card and relationship score with Hana |
 
 👉 Learn more: [AI and Settings](ai-and-settings.md)
@@ -41,7 +41,7 @@ Tools for server owners and administrators to maintain community guidelines.
 | :--- | :--- |
 | `/hanacontext` | Manage server context and configure the **Dedicated Server Secretary Desk** (also available as `/secretary`) |
 | `/admin` | AI system admin hub for configuring the server's **central API keys** (moderators only) |
-| `/hanainsights` | Displays AI quota metrics, usage, and server tier entitlements |
+| `/hanainsights` | Displays this week's AI quota and the features active for everyone (all free) |
 
 👉 Learn more: [Server Owner Guide & Secretary Desk](../roomai-and-permissions.md)
 
@@ -82,10 +82,6 @@ Summon Hana to your voice channel to read chat messages with automatic link and 
 
 ---
 
-## 💎 Premium Benefits
+## 🆓 All features are free during beta
 
-| Command | Description |
-| :--- | :--- |
-| `/premium` | View Hana Premium tiers and access support links |
-
-👉 Learn more: [Hana Premium](premium.md)
+There is no Premium tier right now. The `/premium` command was removed; server features are open to everyone. Support links remain in the [Terms & Privacy policy](https://github.com/ltxq/hanaTERMS_OF_SERVICE-PRIVACY_POLICY).

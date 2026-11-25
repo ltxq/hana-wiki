@@ -48,6 +48,6 @@ Join a voice channel and type `/tts` in your text chat. Hana joins and narrates 
 
 ---
 
-## 6. Personalize Your Experience (`/settingai`)
+## 6. Personalize Your Experience (`/settings`)
 
-Each member can use `/settingai` to adjust personal timezone, manage server memory, or teach Hana a preferred nickname.
+Each member can use `/settings` to pick their language (right on the first page), adjust personal timezone, or teach Hana a preferred nickname. Memory viewing was removed because Hana now keeps only short-term memory.

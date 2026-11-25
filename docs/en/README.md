@@ -58,7 +58,8 @@ Hana is an expressive, context-aware Discord Application designed to enrich comm
 
 ---
 
-## Need Support or Premium?
+## Need Support?
 
 - Join our community on [Hana Discord](https://discord.gg/qWbQEABAPA)
-- Review our full legal policies at [Terms & Privacy](https://github.com/skyy064986/hanaTERMS_OF_SERVICE-PRIVACY_POLICY)
+- Review our full legal policies at [Terms & Privacy](https://github.com/ltxq/hanaTERMS_OF_SERVICE-PRIVACY_POLICY)
+- All bot features are free during beta — there is no Premium tier.

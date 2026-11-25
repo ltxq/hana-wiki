@@ -9,7 +9,6 @@
   * [ระบบอ่านออกเสียง TTS](commands/tts.md)
   * [รูปท่องเที่ยวญี่ปุ่น](commands/travel-photo.md)
   * [ความสนุกและ Anime GIF](commands/fun-and-actions.md)
-  * [Hana Premium](commands/premium.md)
 * [คู่มือเจ้าของเซิร์ฟเวอร์ & โต๊ะเลขา](roomai-and-permissions.md)
 * [ความจำและความสัมพันธ์](memory-and-relationship.md)
 * [คำถามที่พบบ่อย](faq.md)

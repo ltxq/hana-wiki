@@ -14,7 +14,7 @@
 - **Natural Interaction**: Server members interact with NPCs by **Replying directly** to an NPC message or by **writing the character's name** in the channel.
 - **Real Conversation Memory**: Each character remembers up to 12 turns of your conversation (kept separately per character and per user, and forgotten after 6 hours of silence).
 - **Your Choice of Model**: a drop-down on the management panel switches between Gemini, OpenRouter (DeepSeek, GPT, Claude), or a custom provider/model instantly.
-- **3 Languages**: the whole panel follows your `/settingai` language (Thai, English or Japanese).
+- **3 Languages**: the whole panel follows your `/settings` language (Thai, English or Japanese).
 - **Isolated Quota**: characters use their own API keys (Gemini / OpenRouter) first, then the server central keys from `/admin`, so the bot host's quota is never consumed.
 - **Decoupled from Hana**: Hana remains a cheerful high-school student chatting in `/setroomai` rooms without role confusion.
 

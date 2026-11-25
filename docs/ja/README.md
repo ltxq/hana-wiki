@@ -58,7 +58,8 @@ Hana は、日本時間に基づく生活ルーチン、ロールプレイ用カ
 
 ---
 
-## サポート・Premium に関して
+## サポートに関して
 
 - 公式サポートコミュニティ: [Hana Discord](https://discord.gg/qWbQEABAPA)
-- 利用規約およびプライバシーポリシー: [Terms & Privacy](https://github.com/skyy064986/hanaTERMS_OF_SERVICE-PRIVACY_POLICY)
+- 利用規約およびプライバシーポリシー: [Terms & Privacy](https://github.com/ltxq/hanaTERMS_OF_SERVICE-PRIVACY_POLICY)
+- ベータ期間中はすべての機能が無料で、Premium プランはありません。

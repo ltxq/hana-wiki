@@ -9,7 +9,6 @@
   * [音声読み上げ（TTS）](commands/tts.md)
   * [日本の旅行写真](commands/travel-photo.md)
   * [Fun と Anime GIF](commands/fun-and-actions.md)
-  * [Hana Premium](commands/premium.md)
 * [サーバー管理者ガイド＆秘書デスク](roomai-and-permissions.md)
 * [メモリーと関係性](memory-and-relationship.md)
 * [よくある質問](faq.md)

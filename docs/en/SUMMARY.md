@@ -9,7 +9,6 @@
   * [Text-to-Speech (TTS)](commands/tts.md)
   * [Japan travel photos](commands/travel-photo.md)
   * [Fun and Anime GIFs](commands/fun-and-actions.md)
-  * [Hana Premium](commands/premium.md)
 * [Server owner guide & Secretary Desk](roomai-and-permissions.md)
 * [Memory and relationship](memory-and-relationship.md)
 * [Frequently asked questions](faq.md)
