@@ -24,14 +24,13 @@ The `/hanacontext` command sets up a **Dedicated Server Secretary** responsible 
 
 ### Setup Instructions
 
-1. Run `/hanacontext` (requires `Manage Guild` or Administrator permissions).
-2. **1-Click Channel Selection (`ChannelSelectMenu`)**: Select the secretary's designated room directly from the dropdown menu without typing channel names or IDs.
-3. Click **Setup Secretary / Edit Details** to open the modal:
-   - **Secretary Name**: The display name used in responses (e.g. `Secretary Saki`, `Server Concierge`).
-   - **Server Context**: Community guidelines, rules, role explanations, FAQs, and important links.
-   - **API Key (Gemini or OpenRouter)**: Use the administrator's own API key. This ensures high throughput without consuming bot host shared quotas.
-   - **AI Model**: Choose your preferred AI model.
-4. Save the configuration. The Secretary is immediately activated in that room!
+1. Run `/hanacontext` (requires `Manage Guild` or Administrator permissions) and click **Set up secretary / Update desk**.
+2. **Pick the room** from the `ChannelSelectMenu` — no channel names or IDs to type.
+3. **Pick the model from the menu** — just press one of the ready-made options (Gemini 3.1 Flash Lite recommended, Gemini 2.5 Flash/Pro, or OpenRouter models). You never have to type a provider/model string.
+4. The final modal only asks for the **Secretary Name** (e.g. `Secretary Saki`), an optional **avatar URL**, and the **opening greeting**.
+5. Save. The Secretary is immediately activated in that room.
+
+> API keys are no longer entered during secretary setup. Add the server's central keys once with `/admin`; the secretary uses them automatically. Server context (rules and info) is configured with the separate buttons in `/hanacontext`.
 
 ### Strict Server-Only Boundary Guardrail
 
@@ -48,7 +47,7 @@ The Secretary remembers up to 12 turns of your conversation (kept separately per
 Inside `/hanacontext`, administrators can:
 - Clear server context or rules.
 - Reset the Secretary setup.
-- Verify API key connection status.
+- Check the server central API key status in `/admin`.
 
 ---
 
