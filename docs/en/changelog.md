@@ -1,5 +1,43 @@
 # Changelog
 
+## HanaBot v1.5.2 — 25 November 2026
+
+- **🔒 Memory is now scoped per server**:
+  - Memory and relationship state are kept per **Discord User ID + Server ID**, so a conversation in one server does not bleed into another.
+  - Older global memory is kept aside, and you can **move it into this server** from `/settingai`.
+  - Memory summarisation jobs are keyed per user and server, so one server can no longer overwrite another.
+- **🌐 The settings panels follow your language**:
+  - New language picker at `/settingai` → Personal info and time (Thai / English / Japanese, or automatic based on what you chat in).
+  - The settings, memory, personal data, and profile panels all render in the language you chose.
+- **🔑 Per-feature API keys**:
+  - The server secretary can now take its own API key through the `sec_keys` field in the setup form (leave it empty to use the server's central keys).
+  - An NPC can take its own key from the **Set API key** button in the NPC management panel.
+  - The NPC panel is split across two button rows so both the per-NPC key and the central vault are reachable.
+- **Documentation and policy updates**: the privacy policy now describes the per-server memory scoping to match the code.
+
+---
+
+## HanaBot v1.5.1 — 25 November 2026
+
+- **Three-language support (Thai / English / Japanese)**:
+  - Moved UI and settings-panel text into `locales/` so each language can be edited independently.
+  - AI quota and queue-full messages now reply in the user's own language instead of always Thai.
+  - The server secretary's off-topic refusal is written **in the speaker's language** instead of always Thai.
+  - Japanese is now supported in memory retrieval and Splatoon lookups.
+  - `/travelphoto` autocomplete matches Japanese, Thai, and English prefecture names.
+- **NPCs and the secretary now remember conversations**:
+  - An NPC keeps up to 12 turns of your conversation (separately per character and per user) instead of forgetting every reply.
+  - The server secretary does the same, so you can ask a follow-up without repeating the topic.
+- **Bug fixes**:
+  - The drawing prompt in `/hanagame` now actually calls the AI, and **counts against your quota** correctly. That code path was dead and never ran.
+  - Removed dead files that no code used (GIF cache, Private AI database, backup modules).
+- **Documentation and policy updates**:
+  - Privacy Policy and Terms of Service rewritten to match the features that actually exist (dropping the removed Private AI and `/dmpanel` sections).
+  - Now states clearly that **memory is shared across servers (per User ID)** while **relationship state is scoped per server**, matching the code.
+  - Added coverage of NPCs, the server secretary, and the `/admin` command to the guide.
+
+---
+
 ## HanaBot v1.5.0 — November 2026
 
 - **Custom Roleplay NPCs (`/npc`)**:

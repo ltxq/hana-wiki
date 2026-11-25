@@ -9,7 +9,8 @@
 - **Webhook Representation**: Every reply is sent through a custom Discord Webhook featuring the NPC's specific avatar and name.
 - **Easy 3-Field Creation (`/npc create`)**: Simply provide the character's Name, Personality/System Prompt, and an Opening Greeting. The bot automatically provisions the webhook and posts the opening line.
 - **Natural Interaction**: Server members can interact with NPCs either by **Replying directly** to an NPC message or by **Mentioning the character's name** in the channel.
-- **Multi-turn Context**: Context from previous message chains and replies is preserved across interactions.
+- **Real Conversation Memory**: Each character remembers up to 12 turns of your conversation (kept separately per character and per user), so it can hold a thread instead of forgetting every reply.
+- **Your Choice of Model**: Pick between Gemini, OpenRouter (including DeepSeek, GPT, Claude), or specify your own provider and model.
 - **Isolated Quota**: Supports user or server-level API keys (Gemini / OpenRouter) with key rotation, preventing bot host quota exhaustion.
 - **Decoupled from Hana**: Hana remains a cheerful high-school student chatting in `/setroomai` rooms without role confusion.
 
@@ -74,13 +75,27 @@ Leave the `channel` option empty to allow the NPC to reply across any eligible c
 ```text
 /npc edit id:npc_xxxxxx
 ```
-Re-opens the configuration modal to modify the character's name, prompt, or avatar.
+Re-opens the configuration modal to modify the character's name, prompt, or avatar. The management panel also lets you pick the **AI model** and set the character's own **API key**.
 
 ### Deleting an NPC (`/npc delete`)
 ```text
 /npc delete id:npc_xxxxxx
 ```
-Permanently removes the NPC and safely purges the associated Discord Webhook from the channel.
+Permanently removes the NPC, its stored conversation history, and safely purges the associated Discord Webhook from the channel.
+
+---
+
+## Setting an API Key
+
+Each character can use its own key, so it never eats into the bot's central quota:
+
+1. Run `/npc edit id:npc_xxxxxx`
+2. Press **Set API key**
+3. Paste your keys, one per line, and save
+
+Hana rotates through the keys automatically when one hits a rate limit, and never substitutes another member's key or the bot's central key. If no key is usable, the character owner is told.
+
+> Server moderators can set the shared keys for the whole server with `/admin`. An NPC uses those when it has no key of its own.
 
 ---
 

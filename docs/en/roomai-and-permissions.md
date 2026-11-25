@@ -38,6 +38,11 @@ The `/hanacontext` command sets up a **Dedicated Server Secretary** responsible 
 The Server Secretary is engineered with strict prompt guardrails:
 - **Exclusively Server Topics**: Answers only questions concerning server guidelines, rules, roles, announcements, and channel directories.
 - **Graceful Off-Topic Refusal**: When asked off-topic questions, casual chat, weather, or jokes, the Secretary politely declines and directs members to server matters or Hana's casual room (`/setroomai`).
+- **Always Answers in Your Language**: The Secretary replies in Thai, English, or Japanese depending on how you write to it, including the off-topic refusal itself.
+
+### Conversation Memory
+
+The Secretary remembers up to 12 turns of your conversation (kept separately per server and per member), so you can ask a follow-up without repeating the topic, for example "and which channel is that?". This history is deleted automatically after six hours without use.
 
 ### Context Management & Reset
 Inside `/hanacontext`, administrators can:
