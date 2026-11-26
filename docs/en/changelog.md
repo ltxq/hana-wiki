@@ -14,6 +14,8 @@
   - Admin Hub layout cleaned up into clear sections with spacing (keys / model / system status) and three short button rows.
   - **Prompt token optimization**: the father/family persona is now a separate prompt variant selected by Discord User ID. Only the bot owner pays for it; ordinary members get a lean "ordinary friend" prompt with no Sky/father context, which also stops Hana calling members "พ่อ".
   - **Weather consistency**: verified Sapporo weather is attached to every RoomAI request in a short line (full detail only when asked), and the "first snow" status/event only activates when the weather API actually reports snow instead of a fixed November date.
+  - **Prompt builder extracted** to `System/roomai-prompt.js` and covered by real tests (owner vs non-owner prompt length, weather injection, weather-gated events) instead of fragile source checks.
+  - **More 3-language coverage**: `/statusai`, `/guildbook`, `/hanainsights`, the Admin Hub, the model picker and the secretary setup flow now follow your `/settings` language.
 - **🎭 `/npc` is now a single button panel**:
   - The five subcommands (`create` / `list` / `move` / `edit` / `delete`) were merged into one `/npc` command that opens an easy button hub, like the secretary desk.
   - Create, filter (all / mine), pick a character from a select menu, change its model, edit its profile/keys/channel, and delete it — all without typing IDs or command names.
