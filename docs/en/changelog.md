@@ -12,6 +12,8 @@
   - Gemini 503 errors now show a short Thai "system is busy, try again in a moment" message instead of raw error JSON (secretary, NPCs and RoomAI).
   - **Server-wide AI model**: set it in `/admin` (button or `/admin model:` autocomplete search). The picker now has separate **Gemini** and **OpenRouter** buttons; Gemini only offers 3.1 Flash or newer (older 2.x models were removed), and free OpenRouter models are listed first. The Secretary and NPCs use the server default but can search/override it per character.
   - Admin Hub layout cleaned up into clear sections with spacing (keys / model / system status) and three short button rows.
+  - **Prompt token optimization**: the father/family persona is now a separate prompt variant selected by Discord User ID. Only the bot owner pays for it; ordinary members get a lean "ordinary friend" prompt with no Sky/father context, which also stops Hana calling members "พ่อ".
+  - **Weather consistency**: verified Sapporo weather is attached to every RoomAI request in a short line (full detail only when asked), and the "first snow" status/event only activates when the weather API actually reports snow instead of a fixed November date.
 - **🎭 `/npc` is now a single button panel**:
   - The five subcommands (`create` / `list` / `move` / `edit` / `delete`) were merged into one `/npc` command that opens an easy button hub, like the secretary desk.
   - Create, filter (all / mine), pick a character from a select menu, change its model, edit its profile/keys/channel, and delete it — all without typing IDs or command names.
