@@ -21,6 +21,7 @@
   - **Chat through sleep hours without disturbing others**: two consecutive messages while Hana sleeps now bring up a private prompt asking whether to keep replying, with ✅ Yes / ❌ No buttons.
   - **`/settings` toggle narrowed** from "ignore the whole schedule" to **skip sleep only** — all other activities stay unchanged, and the button in the private prompt stays in sync with the one in `/settings`.
   - Removed the "หายไปไหนมาเนี่ย" greeting when someone returns to chatting.
+  - **Secretary no longer leaks into normal chat**: it now answers only in its configured desk channel (including threads of it) or when you reply to a secretary message. Simply writing the word "เลขา" in another room no longer summons it.
 - **🎭 `/npc` is now a single button panel**:
   - The five subcommands (`create` / `list` / `move` / `edit` / `delete`) were merged into one `/npc` command that opens an easy button hub, like the secretary desk.
   - Create, filter (all / mine), pick a character from a select menu, change its model, edit its profile/keys/channel, and delete it — all without typing IDs or command names.
