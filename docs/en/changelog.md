@@ -18,6 +18,9 @@
   - **More 3-language coverage**: `/statusai`, `/guildbook`, `/hanainsights`, the Admin Hub, the model picker and the secretary setup flow now follow your `/settings` language.
   - **OpenRouter model choices greatly expanded**: hundreds of real chat models pulled from OpenRouter's live list (unavailable/expired/non-chat entries filtered out), searchable and pageable. Removed the word "free" — providers open models for temporary trials, so no list is permanent.
   - **No more server member threshold**: adding Hana to a small server no longer triggers a rejection notice or automatic leave. Hana just logs the server details (name, owner, member counts) for auditing.
+  - **Chat through sleep hours without disturbing others**: two consecutive messages while Hana sleeps now bring up a private prompt asking whether to keep replying, with ✅ Yes / ❌ No buttons.
+  - **`/settings` toggle narrowed** from "ignore the whole schedule" to **skip sleep only** — all other activities stay unchanged, and the button in the private prompt stays in sync with the one in `/settings`.
+  - Removed the "หายไปไหนมาเนี่ย" greeting when someone returns to chatting.
 - **🎭 `/npc` is now a single button panel**:
   - The five subcommands (`create` / `list` / `move` / `edit` / `delete`) were merged into one `/npc` command that opens an easy button hub, like the secretary desk.
   - Create, filter (all / mine), pick a character from a select menu, change its model, edit its profile/keys/channel, and delete it — all without typing IDs or command names.
